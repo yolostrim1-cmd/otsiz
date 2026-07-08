@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drift King — Drift O'yini</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div id="game-container">
+  <canvas id="gameCanvas"></canvas>
+ 
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-row">
+      <div id="speed">0 km/h</div>
+      <div id="driftScore">Drift: 0</div>
+      <div id="totalScore">Jami: 0</div>
+    </div>
+    <div id="missionInfo" class="hidden"></div>
+    <button id="pauseBtn">⏸</button>
+  </div>
+ 
+  <!-- Bosh menyu -->
+  <div id="mainMenu" class="screen">
+    <h1>🚗 DRIFT KING</h1>
+    <p class="subtitle">Klaviaturada drift qiluvchi o'yin</p>
+    <button class="menu-btn" id="btnFreeRoam">🌆 Erkin yo'l</button>
+    <button class="menu-btn" id="btnMissions">🎯 Topshiriqlar</button>
+    <button class="menu-btn" id="btnControls">⌨️ Boshqarish</button>
+  </div>
+ 
+  <!-- Topshiriqlar ro'yxati -->
+  <div id="missionMenu" class="screen hidden">
+    <h2>🎯 Topshiriqlarni tanlang</h2>
+    <div id="missionList"></div>
+    <button class="menu-btn back-btn" id="backFromMissions">⬅ Orqaga</button>
+  </div>
+ 
+  <!-- Boshqarish oynasi -->
+  <div id="controlsMenu" class="screen hidden">
+    <h2>⌨️ Boshqarish tugmalari</h2>
+    <ul class="controls-list">
+      <li><span class="key">W / ↑</span> Gaz bosish</li>
+      <li><span class="key">S / ↓</span> Tormoz / Orqaga</li>
+      <li><span class="key">A / ←</span> Chapga burilish</li>
+      <li><span class="key">D / →</span> O'ngga burilish</li>
+      <li><span class="key">SPACE</span> Qo'l tormoz (drift!)</li>
+      <li><span class="key">R</span> Mashinani qayta joylash</li>
+      <li><span class="key">ESC</span> Pauza / Menyu</li>
+    </ul>
+    <button class="menu-btn back-btn" id="backFromControls">⬅ Orqaga</button>
+  </div>
+ 
+  <!-- Pauza oynasi -->
+  <div id="pauseMenu" class="screen hidden">
+    <h2>⏸ Pauza</h2>
+    <button class="menu-btn" id="resumeBtn">▶ Davom etish</button>
+    <button class="menu-btn" id="restartBtn">🔄 Qayta boshlash</button>
+    <button class="menu-btn" id="toMenuBtn">🏠 Bosh menyu</button>
+  </div>
+ 
+  <!-- Topshiriq yakunlandi oynasi -->
+  <div id="resultMenu" class="screen hidden">
+    <h2 id="resultTitle">🏁 Natija</h2>
+    <p id="resultText"></p>
+    <button class="menu-btn" id="resultRetry">🔄 Qayta urinish</button>
+    <button class="menu-btn" id="resultToMenu">🏠 Bosh menyu</button>
+  </div>
+ 
+  <div id="touchHint" class="hidden">Mobil qurilmada klaviatura tavsiya etiladi 📱➡️⌨️</div>
+</div>
+ 
+<script src="main.js"></script>
+</body>
+</html>
